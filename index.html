@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Password Strength Analyzer</h1>
+        <p class="subtitle">
+            Check your password strength and improve your security
+        </p>
+
+        <div class="input-section">
+            <label for="password">Enter Password</label>
+
+            <div class="password-box">
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    autocomplete="off"
+                >
+                <button id="togglePassword" type="button">Show</button>
+            </div>
+        </div>
+
+        <div class="strength-section">
+
+            <div class="strength-header">
+                <span>Password Strength</span>
+                <span id="strengthText">---</span>
+            </div>
+
+            <div class="strength-bar">
+                <div id="strengthProgress"></div>
+            </div>
+
+        </div>
+
+        <div class="requirements">
+
+            <h2>Password Requirements</h2>
+
+            <p id="length">○ At least 8 characters</p>
+            <p id="uppercase">○ Contains an uppercase letter</p>
+            <p id="lowercase">○ Contains a lowercase letter</p>
+            <p id="number">○ Contains a number</p>
+            <p id="special">○ Contains a special character</p>
+            <p id="unique">○ No obvious repeated pattern</p>
+
+        </div>
+
+        <div class="suggestions">
+
+            <h2>Security Suggestions</h2>
+
+            <ul id="suggestionList">
+                <li>Enter a password to see security suggestions.</li>
+            </ul>
+
+        </div>
+
+        <button id="generatePassword" class="generate-btn">
+            Generate Strong Password
+        </button>
+
+        <div class="generated-section">
+
+            <input
+                type="text"
+                id="generatedPassword"
+                readonly
+                placeholder="Generated password will appear here"
+            >
+
+            <button id="copyPassword" type="button">
+                Copy
+            </button>
+
+        </div>
+
+        <p class="footer">
+            Passwords are analyzed locally and are not stored.
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
